@@ -42,7 +42,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:4000/api/users/logout", {});
+      await axios.post("https://wearology-backend.onrender.com/api/users/logout", {});
       localStorage.removeItem("token");
       setIsLoggedIn(false);
       navigate("/login");
