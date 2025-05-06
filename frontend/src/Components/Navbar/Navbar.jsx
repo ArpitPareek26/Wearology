@@ -42,11 +42,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(
-        "http://localhost:4000/api/users/logout",
-        {},
-        { withCredentials: true }
-      );
+      await axios.post("http://localhost:4000/api/users/logout", {});
       localStorage.removeItem("token");
       setIsLoggedIn(false);
       navigate("/login");
@@ -56,7 +52,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   };
   return (
     <div>
-      <nav className="bg-gray-800 fixed top-0 left-0 right-0">
+      <nav className="bg-gray-800 fixed top-0 left-0 right-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             {/* Brand Name */}
