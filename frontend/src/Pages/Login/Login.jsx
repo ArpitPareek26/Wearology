@@ -195,7 +195,7 @@ const Login = ({ setIsLoggedIn }) => {
     setLoading(true); // Begin loading state
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/users/login",
+        "https://wearology-backend.onrender.com/api/users/login",
         payload
       );
 
